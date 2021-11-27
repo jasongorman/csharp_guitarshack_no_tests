@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarShack", "GuitarShack\GuitarShack.csproj", "{C8CC6CA7-DD47-417C-AFEF-C8021758CF97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarShack.Test", "GuitarShack.Test\GuitarShack.Test.csproj", "{8FA37709-5B3F-4E5A-8BAF-B349FD901FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarShack.Web", "GuitarShack.Web\GuitarShack.Web.csproj", "{509E5834-08A9-49A0-A226-F38F226C4C45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8CC6CA7-DD47-417C-AFEF-C8021758CF97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CC6CA7-DD47-417C-AFEF-C8021758CF97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CC6CA7-DD47-417C-AFEF-C8021758CF97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CC6CA7-DD47-417C-AFEF-C8021758CF97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA37709-5B3F-4E5A-8BAF-B349FD901FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA37709-5B3F-4E5A-8BAF-B349FD901FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA37709-5B3F-4E5A-8BAF-B349FD901FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA37709-5B3F-4E5A-8BAF-B349FD901FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509E5834-08A9-49A0-A226-F38F226C4C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509E5834-08A9-49A0-A226-F38F226C4C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509E5834-08A9-49A0-A226-F38F226C4C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509E5834-08A9-49A0-A226-F38F226C4C45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
