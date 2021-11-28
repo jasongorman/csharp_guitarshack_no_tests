@@ -1,4 +1,4 @@
-﻿namespace GuitarShack.Test
+﻿namespace GuitarShack
 {
     public interface IRestockLevel
     {
