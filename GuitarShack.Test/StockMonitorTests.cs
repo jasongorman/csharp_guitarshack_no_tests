@@ -8,62 +8,27 @@ namespace GuitarShack.Test
         [Fact]
         public void ProductSold_AlertSent()
         {
-            var mockAlert = new Mock<Alert>();
+            var mockAlert = new Mock<IAlert>();
             Product product = new Product(811, 25);
-            Warehouse warehouse = new StubWarehouse(product);
-            RestockLevel restockLevel = new StubRestockLevel(24);
+            IWarehouse warehouse = new StubWarehouse(product);
+            IRestockLevel restockLevel = new StubRestockLevel(24);
             StockMonitor monitor = new StockMonitor(mockAlert.Object, warehouse, restockLevel);
             monitor.HandleSale(811, 1);
             mockAlert.Verify(alert => alert.Send("Please order more of product 811"));
         }
 
-        public class StubRestockLevel : RestockLevel
+        public class StubRestockLevel : IRestockLevel
         {
             public StubRestockLevel(int level)
             {
             }
         }
 
-        public class StubWarehouse : Warehouse
+        public class StubWarehouse : IWarehouse
         {
             public StubWarehouse(Product product)
             {
             }
         }
-    }
-
-    public interface RestockLevel
-    {
-    }
-
-    public interface Warehouse
-    {
-    }
-
-    public class Product
-    {
-        public Product(int id, int stock)
-        {
-        }
-    }
-
-    public class StockMonitor
-    {
-        private readonly Alert _alert;
-
-        public StockMonitor(Alert alert, Warehouse warehouse, RestockLevel restockLevel)
-        {
-            _alert = alert;
-        }
-
-        public void HandleSale(int productId, int saleQuantity)
-        {
-            _alert.Send("Please order more of product " + productId);
-        }
-    }
-
-    public interface Alert
-    {
-        void Send(string message);
     }
 }
