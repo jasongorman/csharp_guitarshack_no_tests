@@ -27,6 +27,7 @@ namespace GuitarShack.Test
             StockMonitor monitor = new StockMonitor(mockAlert.Object, warehouse, restockLevel);
             monitor.HandleSale(811, 1);
             mockAlert.Verify(alert => alert.Send(It.IsAny<string>()), Times.Never);
+            
         }
 
         private class StubRestockLevel : IRestockLevel
