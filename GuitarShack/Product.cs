@@ -4,6 +4,9 @@
     {
         public Product(int id, int stock)
         {
+            Stock = stock;
         }
+
+        public int Stock { get; }
     }
 }
