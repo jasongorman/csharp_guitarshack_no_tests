@@ -14,8 +14,8 @@ namespace GuitarShack.Web.Controllers
             _logger = logger;
         }
 
-        [HttpPost]
-        public StockCheckResult Post(SaleEvent sale)
+        [HttpGet]
+        public StockCheckResult Get(SaleEvent sale)
         {
             return new StockCheckResult() {alertSent = false, message = ""};
         }
