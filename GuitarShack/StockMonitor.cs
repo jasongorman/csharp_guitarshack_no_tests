@@ -17,7 +17,7 @@
         {
             Product product = _warehouse.GetProduct(productId);
             
-            if(product.Stock - saleQuantity <= _restockLevel.Calculate(product))
+            if(product.stock - saleQuantity <= _restockLevel.Calculate(product))
                 _alert.Send("Please order more of product " + productId);
         }
     }

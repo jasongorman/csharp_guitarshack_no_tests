@@ -4,13 +4,17 @@
     {
         public Product(int id, int stock, int leadTime)
         {
-            Id = id;
-            Stock = stock;
-            LeadTime = leadTime;
+            this.id = id;
+            this.stock = stock;
+            this.leadTime = leadTime;
         }
 
-        public int Id { get; }
-        public int Stock { get; }
-        public int LeadTime { get; }
+        public Product()
+        {
+        }
+
+        public int id { get; set; }
+        public int stock { get; set; }
+        public int leadTime { get; set; }
     }
 }
