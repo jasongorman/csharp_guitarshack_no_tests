@@ -15,7 +15,7 @@ namespace GuitarShack.Web.Controllers
         }
 
         [HttpGet]
-        public StockCheckResult Get(SaleEvent sale)
+        public StockCheckResult Get(int productId, int quantity)
         {
             return new StockCheckResult() {alertSent = false, message = ""};
         }
