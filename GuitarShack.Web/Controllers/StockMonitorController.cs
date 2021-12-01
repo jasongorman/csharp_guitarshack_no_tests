@@ -28,7 +28,7 @@ namespace GuitarShack.Web.Controllers
            
             monitor.HandleSale(productId, quantity);
             
-            return new StockCheckResult(){ alertSent = alert.Message != "", message = alert.Message };
+            return new StockCheckResult(){ alertSent = !string.IsNullOrEmpty(alert.Message), message = alert.Message };
         }
 
         public class MockAlert : IAlert
