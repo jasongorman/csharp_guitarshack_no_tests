@@ -15,12 +15,7 @@ namespace GuitarShack
 
         public T Fetch(Dictionary<string, string> queryParams)
         {
-            string queryString = "?";
-
-            foreach (var key in queryParams.Keys)
-            {
-                queryString += key + "=" + queryParams[key] + "&";
-            }
+            var queryString = new QueryStringBuilder(queryParams).Build();
 
             HttpClient client = new HttpClient();
 
