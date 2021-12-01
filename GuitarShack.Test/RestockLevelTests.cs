@@ -9,7 +9,7 @@ namespace GuitarShack.Test
         public void CalculatedAsProductLeadTimeTimesAverageDailySales()
         {
             ISalesHistory salesHistory = new StubSalesHistory(15);
-            IRestockLevel restockLevel = new ProductRestockLevel(salesHistory);
+            IRestockLevel restockLevel = new LeadTimeRestockLevel(salesHistory);
             Product product = new Product(811, 0, 14);
             Assert.Equal(7, restockLevel.Calculate(product));
         }

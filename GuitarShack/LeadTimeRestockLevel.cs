@@ -2,11 +2,11 @@
 
 namespace GuitarShack
 {
-    public class ProductRestockLevel : IRestockLevel
+    public class LeadTimeRestockLevel : IRestockLevel
     {
         private readonly ISalesHistory _salesHistory;
 
-        public ProductRestockLevel(ISalesHistory salesHistory)
+        public LeadTimeRestockLevel(ISalesHistory salesHistory)
         {
             _salesHistory = salesHistory;
         }
