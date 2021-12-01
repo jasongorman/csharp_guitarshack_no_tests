@@ -9,7 +9,7 @@ namespace GuitarShack.Test
         public void ProductSold_AlertSent()
         {
             var mockAlert = new Mock<IAlert>();
-            Product product = new Product(811, 25);
+            Product product = new Product(811, 25, 14);
             IWarehouse warehouse = new StubWarehouse(product);
             IRestockLevel restockLevel = new StubRestockLevel(24);
             StockMonitor monitor = new StockMonitor(mockAlert.Object, warehouse, restockLevel);
@@ -21,7 +21,7 @@ namespace GuitarShack.Test
         public void ProductSold_AlertNotSent()
         {
             var mockAlert = new Mock<IAlert>();
-            Product product = new Product(811, 26);
+            Product product = new Product(811, 26, 14);
             IWarehouse warehouse = new StubWarehouse(product);
             IRestockLevel restockLevel = new StubRestockLevel(24);
             StockMonitor monitor = new StockMonitor(mockAlert.Object, warehouse, restockLevel);

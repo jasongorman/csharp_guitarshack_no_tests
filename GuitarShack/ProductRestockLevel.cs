@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GuitarShack.Test
+namespace GuitarShack
 {
     public class ProductRestockLevel : IRestockLevel
     {
