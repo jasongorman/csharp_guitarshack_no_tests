@@ -13,7 +13,7 @@ namespace GuitarShack
 
         public int Calculate(Product product)
         {
-            int totalSales = _salesHistory.Total(product.id, DateTime.Today, DateTime.Today);
+            int totalSales = _salesHistory.Total(product.id, DateTime.Today.AddDays(-30), DateTime.Today);
 
             double averageDailySales = totalSales / 30.0;
             return (int) Math.Ceiling(product.leadTime * averageDailySales);

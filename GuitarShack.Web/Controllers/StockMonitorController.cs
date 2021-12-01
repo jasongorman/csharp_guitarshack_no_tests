@@ -17,7 +17,28 @@ namespace GuitarShack.Web.Controllers
         [HttpGet]
         public StockCheckResult Get(int productId, int quantity)
         {
-            return new StockCheckResult() {alertSent = false, message = ""};
+            MockAlert alert = new MockAlert();
+            StockMonitor monitor = new StockMonitor(
+                alert, 
+                new ProductWarehouse(
+                    new WebService<Product>("https://6hr1390c1j.execute-api.us-east-2.amazonaws.com/default/product")),
+                new LeadTimeRestockLevel(
+                    new ProductSalesHistory(
+                        new WebService<Sales>($"https://gjtvhjg8e9.execute-api.us-east-2.amazonaws.com/default/sales"))));
+           
+            monitor.HandleSale(productId, quantity);
+            
+            return new StockCheckResult(){ alertSent = alert.Message != "", message = alert.Message };
+        }
+
+        public class MockAlert : IAlert
+        {
+            public void Send(string message)
+            {
+                Message = message;
+            }
+
+            public string Message { get; private set; }
         }
     }
 
