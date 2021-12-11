@@ -13,7 +13,7 @@ namespace GuitarShack
             _baseUrl = baseUrl;
         }
 
-        public T Fetch(Dictionary<string, string> queryParams)
+        public virtual T Fetch(Dictionary<string, string> queryParams)
         {
             var queryString = new QueryStringBuilder(queryParams).Build();
 

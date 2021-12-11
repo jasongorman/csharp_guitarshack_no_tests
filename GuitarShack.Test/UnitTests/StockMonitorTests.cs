@@ -1,7 +1,7 @@
 ﻿using Moq;
 using Xunit;
 
-namespace GuitarShack.Test
+namespace GuitarShack.Test.UnitTests
 {
     public class StockMonitorTests
     {

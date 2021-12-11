@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace GuitarShack.Test
+namespace GuitarShack.Test.UnitTests
 {
     public class RestockLevelTests
     {
